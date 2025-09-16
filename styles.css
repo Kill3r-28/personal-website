@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: row;
+    padding-top: 60px;
+    background-color: #fff;
+    color: #222;
+}
+
+.sidebar {
+    width: 180px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+    color: #eee;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.sidebar h2 {
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.sidebar li {
+    margin-bottom: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.sidebar a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.sidebar a:hover {
+    color: #fff;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #fff;
+    color: #222;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 180px; /* Match sidebar width */
+    z-index: 1000;
+    box-sizing: border-box;
+    border-bottom: 1px solid #222;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: 'Times New Roman', Times, serif;
+}
