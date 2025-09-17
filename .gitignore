@@ -1,0 +1,23 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node.js dependencies (if you use Node)
+node_modules/
+
+# Logs
+*.log
+
+# Build output
+dist/
+build/
+
+# Environment files
+.env
+
+# IDE settings
+.vscode/
+.idea/
+
+# Misc
+counter.json
