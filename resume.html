@@ -1,43 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Resume | Side B</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="topbar">
-        <h1>Side B</h1>
-    </div>
-    <div class="sidebar">
-        <!-- <h2>Navigation</h2> -->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="resume.html">Resume</a></li>
-        </ul>
-    </div>
-    <div class="main-content">
-        <h1>Resume</h1>
-        <iframe 
-            src="https://drive.google.com/file/d/1arLkm_xvlUl5VGyasikO9PDR6UgQO5pP/preview" 
-            width="816px" 
-            height="1056px" 
-            style="border: none; display: block; margin: 0 auto;">
-            This browser does not support PDFs. Please download the PDF to view it: 
-            <a href="https://drive.google.com/file/d/1arLkm_xvlUl5VGyasikO9PDR6UgQO5pP/view?usp=sharing">Download PDF</a>
-        </iframe>
-        <p id="visitor-count">Loading visitor count...</p>
-        <script>
-            fetch('/api/visit')
-              .then(res => res.json())
-              .then(data => {
-                document.getElementById('visitor-count').textContent = `Visitor count: ${data.count}`;
-              });
-        </script>
-    </div>
-    <script src="script.js"></script>
+    <main class="center-frame">
+        <header>
+            <h2 class="site-title">Side B</h2>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="resume.html">Resume</a>
+            </nav>
+        </header>
+        <section>
+            <h1>Resume</h1>
+            <iframe 
+                src="https://drive.google.com/file/d/1arLkm_xvlUl5VGyasikO9PDR6UgQO5pP/preview" 
+                width="816" 
+                height="1056" 
+                style="border: none; display: block; margin: 0 auto;">
+                This browser does not support PDFs. Please download the PDF to view it: 
+                <a href="resume.pdf">Download PDF</a>
+            </iframe>
+        </section>
+    </main>
 </body>
 </html>

@@ -5,6 +5,9 @@ Thumbs.db
 # Node.js dependencies (if you use Node)
 node_modules/
 
+# trash folder need not be tracked
+trash/
+
 # Logs
 *.log
 

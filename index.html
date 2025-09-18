@@ -1,34 +1,37 @@
-<!DOCTYPE html5>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web Page</title>
+    <title>Home | Side B</title>
     <link rel="stylesheet" href="styles.css">
-        <!-- Add this line in the <head> section of all your HTML files -->
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="sidebar">
-        <!-- <h2>Navigation</h2> -->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="resume.html">Resume</a></li>
-        </ul>
-    </div>
-    <div class="main-content">
-        <h1>Welcome to Manoj's Side B</h1>
-        <p>Be ready to find some interesting things here.</p>
-        <p>Manoj is currently working as a Manager for Operations at an Edu-Tech first <br>
-        called NxtWave Disruptive Technologies Pvt Ltd</p>
-        <p>He aspires to be a Product Manager soon. He is upskilling himself in this direction</p>
-        <p>Apart from this you will find him to be a good connoiseur of movies, books and history.</p>
-    </div>
-    <script src="script.js"></script>
+    <main class="center-frame">
+        <header>
+            <h2 class="site-title">Side B</h2>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="resume.html">Resume</a>
+            </nav>
+        </header>
+        <section>
+            <h1>Welcome to Manoj's Side B</h1>
+            <p>Be ready to find some interesting things here.</p>
+            <p>Manoj is currently working as a Manager for Operations at an Edu-Tech firm called NxtWave Disruptive Technologies Pvt Ltd.</p>
+            <p>He aspires to be a Product Manager soon and is upskilling himself in this direction.</p>
+            <p>Apart from this, you will find him to be a good connoisseur of movies, books, and history.</p>
+        </section>
+        <footer style="width:100%; text-align:center; margin-top:32px;">
+            <p id="visitor-count">Loading visitor count...</p>
+        </footer>
+    </main>
+    <script>
+        fetch('/api/visit')
+          .then(res => res.json())
+          .then(data => {
+            document.getElementById('visitor-count').textContent = `Page visits: ${data.count}`;
+          });
+    </script>
 </body>
-<div class="topbar">
-        <h1>Side B</h1>
-    </div>
 </html>
