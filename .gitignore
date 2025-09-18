@@ -11,6 +11,9 @@ trash/
 # Logs
 *.log
 
+# Workflow files
+.github/
+
 # Build output
 dist/
 build/
