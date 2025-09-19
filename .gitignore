@@ -12,7 +12,10 @@ trash/
 *.log
 
 # Workflow files
-.github/
+.github
+
+#Access keys
+user-1_accessKeys.csv
 
 # Build output
 dist/
