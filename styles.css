@@ -6,8 +6,9 @@
 }
 
 body {
-  font-size: 19px;
+  font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7; /* comfortable default */
 }
 
 /* Header bar */
@@ -33,14 +34,18 @@ body {
 }
 
 .nav .nav-link {
-  color: inherit;
+  color: #aaa; /* grey navbar links */
   text-decoration: none;
   font-weight: 700;
 }
 
 .nav .nav-link:hover {
+  color: #ddd;
   text-decoration: underline;
 }
+
+/* Space between nav links */
+.nav .nav-link + .nav-link { margin-left: 16px; }
 
 /* Blinking bar cursor in header */
 .cursor {
@@ -77,6 +82,7 @@ body {
   opacity: 0.8;
   text-align: left;
   margin-top: 30px; /* push name+email down */
+  flex: 0 0 auto; /* size to content */
 }
 
 .footer-right {
@@ -90,28 +96,40 @@ body {
   color: #aaa;
 }
 
+/* Global link color: Ubuntu Orange */
+a { color: #E95420; }
+a:hover, a:focus { color: #ff6a3d; }
+
 /* Improve footer readability */
 .site-footer p { line-height: 1.6; }
 .site-footer .about-title { line-height: 1.4; }
 
-.footer-name { font-weight: 600; margin-bottom: 6px; }
-.footer-email a { color: #aaa; text-decoration: none; }
-.footer-email a:hover { text-decoration: underline; }
+.footer-name { font-weight: 600; margin-bottom: 6px; font-size: 0.95em; white-space: nowrap; }
+.footer-email a { color: #E95420; text-decoration: none; }
+.footer-email a:hover, .footer-email a:focus { color: #ff6a3d; text-decoration: underline; }
 
 .about-box {
-  max-width: 350px;
+  max-width: 500px;
   background: transparent;
   border: none;
   border-radius: 0;
   padding: 0;
   box-shadow: none;
+  font-size: 1rem;
 }
 
 .about-title {
   margin-top: 0;
   margin-bottom: 8px;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #E95420; /* Ubuntu Orange */
 }
 
 /* Social block removed */
+/* Give paragraphs extra breathing room in main container */
+.container p { line-height: 1.8; }
+
+/* Keep large headings a bit tighter */
+header h1 { line-height: 1.2; }
+/* Color the Welcome heading */
+header h1 { color: #E95420; }
