@@ -11,9 +11,6 @@ trash/
 # Logs
 *.log
 
-# Workflow files
-.github
-
 #Access keys
 user-1_accessKeys.csv
 

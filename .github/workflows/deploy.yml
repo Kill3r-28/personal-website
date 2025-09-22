@@ -1,0 +1,51 @@
+name: Check Actions
+
+on: [push]
+
+jobs:
+  explore-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This workflow ran successfully!"
+
+
+
+
+
+
+
+
+# name: Deploy Static Website to S3 + CloudFront
+
+# on:
+#   push:
+#     branches: [main]
+# env:
+#   AWS_REGION: ${{ secrets.AWS_REGION }}
+#   S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
+#   DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION_ID }}
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Repo
+#         uses: actions/checkout@v4
+#       - name: Configure AWS Credentials
+#         uses: aws-actions/configure-aws-credentials@v4
+#         with:
+#           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#           aws-region: ${{ env.AWS_REGION }}
+#       - name: Sync files to S3
+#         run: |
+#           aws s3 sync . s3://$S3_BUCKET_NAME --delete \
+#             --exclude ".git/*" \
+#             --exclude ".github/*" \
+#             --exclude "node_modules/*" \
+#             --exclude ".DS_Store" \
+#             --exclude "*.yml"
+#       - name: Invalidate CloudFront Cache
+#         run: |
+#           aws cloudfront create-invalidation \
+#             --distribution-id $DISTRIBUTION_ID \
+#             --paths "/*"
