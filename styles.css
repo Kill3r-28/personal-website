@@ -3,6 +3,23 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 0 24px;
+    font-size: 15px;
+}
+
+.row{
+  display: flex;
+}
+.column{
+  flex: 50%;
+  padding: 10px;
+}
+
+.left-text{
+  float: left;
+}
+
+.right-text{
+  float: right
 }
 
 body {
@@ -56,10 +73,16 @@ h3 { font-size: 1.25rem; line-height: 1.4; }
 .cursor {
   width: 10px;
   height: 1.2em;
-  background: currentColor;
+  background: #fff; /* keep cursor white regardless of link color */
   display: inline-block;
   margin-left: 2px;
   animation: blink 1s steps(1, end) infinite;
+}
+
+/* If cursor is inside a link, don't underline or change color */
+a .cursor, a:visited .cursor, a:hover .cursor, a:active .cursor {
+  background: #fff;
+  text-decoration: none;
 }
 
 @keyframes blink {
@@ -142,4 +165,3 @@ a:hover, a:focus { color: #ff6a3d; }
 
 /* Keep large headings a bit tighter */
 header h1 { line-height: 1.2; }
-
