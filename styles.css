@@ -28,6 +28,11 @@ body {
   line-height: 1.7; /* comfortable default */
 }
 
+/* Make page fill viewport and enable sticky footer via flex */
+html, body { height: 100%; margin: 0; }
+body { display: flex; flex-direction: column; min-height: 100vh; }
+.container { flex: 1 0 auto; }
+
 /* Explicit heading scale for consistency */
 h1 { font-size: 2rem; line-height: 1.3; }
 h2 { font-size: 1.5rem; line-height: 1.35; }
@@ -92,9 +97,7 @@ a .cursor, a:visited .cursor, a:hover .cursor, a:active .cursor {
 
 /* Footer bar (mirrors header) */
 .site-footer {
-  position: sticky;
-  top: 100vh; /* ensures it hugs the bottom when content is short */
-  margin-top: 32px;
+  margin-top: auto; /* push footer to bottom on short pages */
   background: #111;
   border-top: 1px solid #333;
 }
