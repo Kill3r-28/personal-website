@@ -19,23 +19,23 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      # - name: Sync files to S3
-      #   run: |
-      #     aws s3 sync . s3://$S3_BUCKET_NAME --delete \
-      #       --exclude ".git/*" \
-      #       --exclude ".github/*" \
-      #       --exclude "node_modules/*" \
-      #       --exclude ".DS_Store" \
-      #       --exclude "*.yml"
+      - name: Sync files to S3
+        run: |
+          aws s3 sync . s3://$S3_BUCKET_NAME --delete \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude "node_modules/*" \
+            --exclude ".DS_Store" \
+            --exclude "*.yml"
 
-      # - name: Invalidate CloudFront Cache
-      #   run: |
-      #     aws cloudfront create-invalidation \
-      #       --distribution-id $DISTRIBUTION_ID \
-      #       --paths "/*"
+      - name: Invalidate CloudFront Cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id $DISTRIBUTION_ID \
+            --paths "/*"
 
-      # Deploy to AWS Amplify in addition to S3/CloudFront to support features like backend integration, hosting previews, or CI/CD workflows managed by Amplify.
-      - name: Deploy to Amplify
-        uses: ambientlight/amplify-cli-action@v2
-        with:
-          amplify_command: publish --yes
+      #Deploy to AWS Amplify in addition to S3/CloudFront to support features like backend integration, hosting previews, or CI/CD workflows managed by Amplify.
+      # - name: Deploy to Amplify
+      #   uses: ambientlight/amplify-cli-action@v2
+      #   with:
+      #     amplify_command: publish --yes
