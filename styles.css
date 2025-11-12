@@ -168,3 +168,5 @@ a:hover, a:focus { color: #ff6a3d; }
 
 /* Keep large headings a bit tighter */
 header h1 { line-height: 1.2; }
+
+p img { max-width: 100%; height: auto; vertical-align: middle; }
